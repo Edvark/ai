@@ -6,8 +6,7 @@
 /* First the type definitions. */
 
 typedef struct Position { /* a position contains a time and the coordinates */
-	int time;
-	int xcoord, ycoord;
+	int x, y, steps;
 } Position;
 
 typedef struct ListNode *List;  /* List is the type of lists of positions */
