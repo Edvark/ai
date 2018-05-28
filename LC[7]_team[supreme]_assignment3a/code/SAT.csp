@@ -1,0 +1,19 @@
+#The set of variables of the CSP
+variables:
+    x1,x2,x3,x4,x5 : integer;
+#Here the domains are defined
+domains:
+    x1,x2,x3,x4,x5 <- [0,1];
+#Here are the constraints:
+constraints:
+    max(max(x1, x2),abs(x3 - 1)) = 1;
+    max(max(abs(x1 -1),abs(x2-1)),abs(x4-1)) = 1;
+    max(max(x1, abs(x2-1)),abs(x5-1)) = 1;
+    max(max(abs(x1 - 1), x3), abs(x4 -1)) = 1;
+    max(max(x1, abs(x3 -1)), x5) = 1;
+    max(max(x1, abs(x4 -1)), x5) = 1;
+    max(max(x2, x4),x5) = 1;
+    max(max(abs(x3 -1), x4), abs(x5 -1)) = 1;
+# Here you can specify in how many solutions
+# you are interested (all, 1, 2, 3, ...)
+solutions: all
