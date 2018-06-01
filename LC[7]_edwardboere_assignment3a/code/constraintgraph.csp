@@ -1,0 +1,17 @@
+variables:
+    A,B,C,D,E : integer;
+
+domains:
+    A,B,C,D,E <- [1, 2, 3, 4];
+
+constraints:
+    A > D;
+    B >= A;
+    B <> C;
+    C <> A;
+    C <> D;
+    C <> D + 1;
+    C > E;
+    D > E;
+
+solutions: all
